@@ -1,3 +1,4 @@
+import { profile } from 'console'
 import NextAuth, { type DefaultSession } from 'next-auth'
 import Google from 'next-auth/providers/google'
 
@@ -23,8 +24,8 @@ export const {
   callbacks: {
     jwt({ token, profile }) {
       if (profile) {
-        token.id = profile.id
-        token.image = profile.avatar_url || profile.picture
+        token.id = profile.email
+        token.image = profile.picture
       }
       return token
     },
