@@ -53,7 +53,7 @@ export function Header() {
           rel="noopener noreferrer"
           className={cn(buttonVariants({ variant: 'outline' }))}
         >
-          <span className="hidden ml-2 md:flex">Numeriblog</span>
+          <span className="hidden md:flex">Numeriblog</span>
           <span className="sm:hidden">NB</span>
         </a>
         <a
