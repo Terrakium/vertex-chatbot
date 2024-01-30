@@ -4,19 +4,19 @@ import * as React from 'react'
 
 import { cn } from '@/lib/utils'
 
-function IconChatbot({ className, ...props }: React.ComponentProps<'svg'>) {
+function IconGoogle({ className }: React.ComponentProps<'svg'>) {
   return (
-    <svg
-      id="Calque_1"
-      data-name="Calque 1"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 700 700"
-      {...props}
-    >
-      <path d="m441.36,227.25h20.71l59.02-59.02,2.9-25.06c-109.85-96.96-277.5-86.51-374.45,23.34-26.93,30.51-46.48,66.81-57.14,106.09,6.58-2.7,13.86-3.13,20.71-1.24l118.05-19.47s6.01-9.94,9.11-9.32c52.51-57.67,140.88-64.39,201.51-15.33h-.41Z" />
-      <path d="m605.17,272.61c-13.57-49.96-41.42-94.87-80.15-129.23l-82.84,82.84c34.98,28.58,54.91,71.64,54.05,116.8v14.7c40.72,0,73.73,33.01,73.73,73.73s-33.01,73.73-73.73,73.73h-147.45l-14.7,14.91v88.43l14.7,14.7h147.45c105.91.82,192.44-84.36,193.26-190.27.5-64.19-31.15-124.38-84.33-160.34Z" />
-      <path d="m201.12,622.39h147.45v-118.05h-147.45c-10.51,0-20.89-2.26-30.44-6.63l-20.71,6.42-59.44,59.02-5.18,20.71c33.33,25.17,74,38.7,115.77,38.52Z" />
-      <path d="m201.12,239.47c-105.91.63-191.26,87-190.62,192.92.35,59.14,27.98,114.81,74.86,150.87l85.53-85.53c-37.11-16.76-53.6-60.44-36.83-97.54,16.76-37.11,60.44-53.6,97.54-36.83,16.35,7.39,29.45,20.48,36.83,36.83l85.53-85.53c-36.39-47.58-92.94-75.39-152.84-75.18Z" />
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+      <rect width="256" height="256" fill="none" />
+      <path
+        d="M128,128h88a88,88,0,1,1-20.11-56"
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="24"
+        className={cn('size-4', className)}
+      />
     </svg>
   )
 }
@@ -398,7 +398,7 @@ function IconChevronUpDown({
 
 export {
   IconEdit,
-  IconChatbot,
+  IconGoogle,
   IconVertexAI,
   IconSeparator,
   IconArrowDown,

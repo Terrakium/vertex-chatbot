@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import { auth } from '@/auth'
 import { Button, buttonVariants } from '@/components/ui/button'
-import { IconChatbot, IconSeparator } from '@/components/ui/icons'
+import { IconGoogle, IconSeparator } from '@/components/ui/icons'
 import { UserMenu } from '@/components/user-menu'
 import { SidebarMobile } from './sidebar-mobile'
 import { SidebarToggle } from './sidebar-toggle'
@@ -23,7 +23,7 @@ async function UserOrLogin() {
         </>
       ) : (
         <Link href="/" target="_blank" rel="nofollow">
-          <IconChatbot className="size-6 mr-2" />
+          <IconGoogle className="size-6 mr-2" />
         </Link>
       )}
       <div className="flex items-center">
@@ -56,6 +56,7 @@ export function Header() {
           className={cn(buttonVariants({ variant: 'outline' }))}
         >
           <span className="hidden ml-2 md:flex">Numeriblog</span>
+          <span className="sm:hidden">NB</span>
         </a>
         <a
           href="https://numericoach.fr/"
