@@ -53,12 +53,12 @@ export function UserMenu({ user }: UserMenuProps) {
           <DropdownMenuSeparator />
           <DropdownMenuItem asChild>
             <a
-              href="https://vercel.com"
+              href="https://gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-between w-full text-xs"
             >
-              Vercel Homepage
+              Gmail
               <IconExternalLink className="size-3 ml-auto" />
             </a>
           </DropdownMenuItem>
@@ -70,7 +70,7 @@ export function UserMenu({ user }: UserMenuProps) {
             }
             className="text-xs"
           >
-            Log Out
+            Déconnexion
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>

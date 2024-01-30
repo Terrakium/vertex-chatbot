@@ -62,9 +62,10 @@ export function ChatShareDialog({
     <Dialog {...props}>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Share link to chat</DialogTitle>
+          <DialogTitle>Partager le lien de la conversation</DialogTitle>
           <DialogDescription>
-            Anyone with the URL will be able to view the shared chat.
+            Tout utilisateur disposant du lien pourra accéder à cette
+            conversation
           </DialogDescription>
         </DialogHeader>
         <div className="p-4 space-y-1 text-sm border rounded-md">
@@ -93,10 +94,10 @@ export function ChatShareDialog({
             {isSharePending ? (
               <>
                 <IconSpinner className="mr-2 animate-spin" />
-                Copying...
+                Copie en cours...
               </>
             ) : (
-              <>Copy link</>
+              <>Copier le lien</>
             )}
           </Button>
         </DialogFooter>

@@ -25,7 +25,7 @@ export function ThemeToggle() {
       ) : (
         <IconSun className="transition-all" />
       )}
-      <span className="sr-only">Toggle theme</span>
+      <span className="sr-only">Changer de thème</span>
     </Button>
   )
 }
