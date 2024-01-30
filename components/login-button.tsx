@@ -5,7 +5,7 @@ import { signIn } from 'next-auth/react'
 
 import { cn } from '@/lib/utils'
 import { Button, type ButtonProps } from '@/components/ui/button'
-import { IconSpinner, IconGoogle } from '@/components/ui/icons'
+import { IconSpinner } from '@/components/ui/icons'
 
 interface LoginButtonProps extends ButtonProps {
   text?: string
@@ -30,11 +30,7 @@ export function LoginButton({
         {...props}
       >
         {/* Insérer une icone ici pour le Google Provider */}
-        {isLoading ? (
-          <IconSpinner className="mr-2 animate-spin" />
-        ) : (
-          <IconGoogle />
-        )}
+        {isLoading ? <IconSpinner className="mr-2 animate-spin" /> : `Google `}
         {text}
       </Button>
     </div>
