@@ -4,86 +4,19 @@ import * as React from 'react'
 
 import { cn } from '@/lib/utils'
 
-function IconNextChat({
-  className,
-  inverted,
-  ...props
-}: React.ComponentProps<'svg'> & { inverted?: boolean }) {
-  const id = React.useId()
-
+function IconChatbot({ className, ...props }: React.ComponentProps<'svg'>) {
   return (
     <svg
-      viewBox="0 0 17 17"
-      fill="none"
+      id="Calque_1"
+      data-name="Calque 1"
       xmlns="http://www.w3.org/2000/svg"
-      className={cn('size-4', className)}
+      viewBox="0 0 700 700"
       {...props}
     >
-      <defs>
-        <linearGradient
-          id={`gradient-${id}-1`}
-          x1="10.6889"
-          y1="10.3556"
-          x2="13.8445"
-          y2="14.2667"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop stopColor={inverted ? 'white' : 'black'} />
-          <stop
-            offset={1}
-            stopColor={inverted ? 'white' : 'black'}
-            stopOpacity={0}
-          />
-        </linearGradient>
-        <linearGradient
-          id={`gradient-${id}-2`}
-          x1="11.7555"
-          y1="4.8"
-          x2="11.7376"
-          y2="9.50002"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop stopColor={inverted ? 'white' : 'black'} />
-          <stop
-            offset={1}
-            stopColor={inverted ? 'white' : 'black'}
-            stopOpacity={0}
-          />
-        </linearGradient>
-      </defs>
-      <path
-        d="M1 16L2.58314 11.2506C1.83084 9.74642 1.63835 8.02363 2.04013 6.39052C2.4419 4.75741 3.41171 3.32057 4.776 2.33712C6.1403 1.35367 7.81003 0.887808 9.4864 1.02289C11.1628 1.15798 12.7364 1.8852 13.9256 3.07442C15.1148 4.26363 15.842 5.83723 15.9771 7.5136C16.1122 9.18997 15.6463 10.8597 14.6629 12.224C13.6794 13.5883 12.2426 14.5581 10.6095 14.9599C8.97637 15.3616 7.25358 15.1692 5.74942 14.4169L1 16Z"
-        fill={inverted ? 'black' : 'white'}
-        stroke={inverted ? 'black' : 'white'}
-        strokeWidth={2}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <mask
-        id="mask0_91_2047"
-        style={{ maskType: 'alpha' }}
-        maskUnits="userSpaceOnUse"
-        x={1}
-        y={0}
-        width={16}
-        height={16}
-      >
-        <circle cx={9} cy={8} r={8} fill={inverted ? 'black' : 'white'} />
-      </mask>
-      <g mask="url(#mask0_91_2047)">
-        <circle cx={9} cy={8} r={8} fill={inverted ? 'black' : 'white'} />
-        <path
-          d="M14.2896 14.0018L7.146 4.8H5.80005V11.1973H6.87681V6.16743L13.4444 14.6529C13.7407 14.4545 14.0231 14.2369 14.2896 14.0018Z"
-          fill={`url(#gradient-${id}-1)`}
-        />
-        <rect
-          x="11.2222"
-          y="4.8"
-          width="1.06667"
-          height="6.4"
-          fill={`url(#gradient-${id}-2)`}
-        />
-      </g>
+      <path d="m441.36,227.25h20.71l59.02-59.02,2.9-25.06c-109.85-96.96-277.5-86.51-374.45,23.34-26.93,30.51-46.48,66.81-57.14,106.09,6.58-2.7,13.86-3.13,20.71-1.24l118.05-19.47s6.01-9.94,9.11-9.32c52.51-57.67,140.88-64.39,201.51-15.33h-.41Z" />
+      <path d="m605.17,272.61c-13.57-49.96-41.42-94.87-80.15-129.23l-82.84,82.84c34.98,28.58,54.91,71.64,54.05,116.8v14.7c40.72,0,73.73,33.01,73.73,73.73s-33.01,73.73-73.73,73.73h-147.45l-14.7,14.91v88.43l14.7,14.7h147.45c105.91.82,192.44-84.36,193.26-190.27.5-64.19-31.15-124.38-84.33-160.34Z" />
+      <path d="m201.12,622.39h147.45v-118.05h-147.45c-10.51,0-20.89-2.26-30.44-6.63l-20.71,6.42-59.44,59.02-5.18,20.71c33.33,25.17,74,38.7,115.77,38.52Z" />
+      <path d="m201.12,239.47c-105.91.63-191.26,87-190.62,192.92.35,59.14,27.98,114.81,74.86,150.87l85.53-85.53c-37.11-16.76-53.6-60.44-36.83-97.54,16.76-37.11,60.44-53.6,97.54-36.83,16.35,7.39,29.45,20.48,36.83,36.83l85.53-85.53c-36.39-47.58-92.94-75.39-152.84-75.18Z" />
     </svg>
   )
 }
@@ -95,6 +28,7 @@ function IconVertexAI({ className, ...props }: React.ComponentProps<'svg'>) {
       viewBox="0 0 24 24"
       width="24px"
       height="24px"
+      {...props}
     >
       <path d="M20,13.89A.77.77,0,0,0,19,13.73l-7,5.14v.22a.72.72,0,1,1,0,1.43v0a.74.74,0,0,0,.45-.15l7.41-5.47A.76.76,0,0,0,20,13.89Z" />
       <path d="M12,20.52a.72.72,0,0,1,0-1.43h0v-.22L5,13.73a.76.76,0,0,0-1,.16.74.74,0,0,0,.16,1l7.41,5.47a.73.73,0,0,0,.44.15v0Z" />
@@ -464,7 +398,7 @@ function IconChevronUpDown({
 
 export {
   IconEdit,
-  IconNextChat,
+  IconChatbot,
   IconVertexAI,
   IconSeparator,
   IconArrowDown,
