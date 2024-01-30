@@ -8,37 +8,29 @@ import { Button, type ButtonProps } from '@/components/ui/button'
 import { IconSpinner } from '@/components/ui/icons'
 
 interface LoginButtonProps extends ButtonProps {
-  showGithubIcon?: boolean
-  showGoogleIcon?: boolean
   text?: string
 }
 
 export function LoginButton({
   text = 'Connexion',
-  showGithubIcon = true,
-  showGoogleIcon = true,
   className,
   ...props
 }: LoginButtonProps) {
   const [isLoading, setIsLoading] = React.useState(false)
   return (
-    <>
+    <div className="flex-col gap-4">
       <Button
         variant="outline"
         onClick={() => {
           setIsLoading(true)
-          // next-auth signIn() function doesn't work yet at Edge Runtime due to usage of BroadcastChannel
           signIn('github', { callbackUrl: `/` })
         }}
         disabled={isLoading}
         className={cn(className)}
         {...props}
       >
-        {isLoading ? (
-          <IconSpinner className="mr-2 animate-spin" />
-        ) : showGithubIcon ? (
-          'GitHub '
-        ) : null}
+        {/* Insérer des icones ici */}
+        {isLoading ? <IconSpinner className="mr-2 animate-spin" /> : 'GitHub '}
         {text}
       </Button>
 
@@ -46,20 +38,16 @@ export function LoginButton({
         variant="outline"
         onClick={() => {
           setIsLoading(true)
-          // next-auth signIn() function doesn't work yet at Edge Runtime due to usage of BroadcastChannel
           signIn('google', { callbackUrl: `/` })
         }}
         disabled={isLoading}
         className={cn(className)}
         {...props}
       >
-        {isLoading ? (
-          <IconSpinner className="mr-2 animate-spin" />
-        ) : showGoogleIcon ? (
-          'Google '
-        ) : null}
+        {/* Insérer des icones ici pour les providers */}
+        {isLoading ? <IconSpinner className="mr-2 animate-spin" /> : 'Google '}
         {text}
       </Button>
-    </>
+    </div>
   )
 }
