@@ -4,12 +4,7 @@ import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import { auth } from '@/auth'
 import { Button, buttonVariants } from '@/components/ui/button'
-import {
-  IconGitHub,
-  IconNextChat,
-  IconSeparator,
-  IconVercel
-} from '@/components/ui/icons'
+import { IconNextChat, IconSeparator, IconVercel } from '@/components/ui/icons'
 import { UserMenu } from '@/components/user-menu'
 import { SidebarMobile } from './sidebar-mobile'
 import { SidebarToggle } from './sidebar-toggle'
@@ -57,12 +52,11 @@ export function Header() {
       <div className="flex items-center justify-end space-x-2">
         <a
           target="_blank"
-          href="https://github.com/vercel/nextjs-ai-chatbot/"
+          href="https://numericoach.fr/"
           rel="noopener noreferrer"
           className={cn(buttonVariants({ variant: 'outline' }))}
         >
-          <IconGitHub />
-          <span className="hidden ml-2 md:flex">GitHub</span>
+          <span className="hidden ml-2 md:flex">Numericoach</span>
         </a>
         <a
           href="https://github.com/vercel/nextjs-ai-chatbot/"
