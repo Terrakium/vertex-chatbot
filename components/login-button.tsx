@@ -18,22 +18,7 @@ export function LoginButton({
 }: LoginButtonProps) {
   const [isLoading, setIsLoading] = React.useState(false)
   return (
-    <div className="flex-col gap-4">
-      <Button
-        variant="outline"
-        onClick={() => {
-          setIsLoading(true)
-          signIn('github', { callbackUrl: `/` })
-        }}
-        disabled={isLoading}
-        className={cn(className)}
-        {...props}
-      >
-        {/* Insérer des icones ici */}
-        {isLoading ? <IconSpinner className="mr-2 animate-spin" /> : 'GitHub '}
-        {text}
-      </Button>
-
+    <div>
       <Button
         variant="outline"
         onClick={() => {
@@ -44,7 +29,7 @@ export function LoginButton({
         className={cn(className)}
         {...props}
       >
-        {/* Insérer des icones ici pour les providers */}
+        {/* Insérer une icone ici pour le Google Provider */}
         {isLoading ? <IconSpinner className="mr-2 animate-spin" /> : 'Google '}
         {text}
       </Button>
